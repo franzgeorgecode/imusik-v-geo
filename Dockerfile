@@ -13,11 +13,11 @@ RUN npm install
 # Copiar el resto de los archivos del proyecto
 COPY . .
 
-# Construir la aplicación (si es necesario)
+# Construir la aplicación para producción
 RUN npm run build
 
 # Exponer el puerto en el que la aplicación escucha
 EXPOSE 3000
 
-# Comando para ejecutar la aplicación
+# Comando para ejecutar la aplicación en producción
 CMD ["npm", "start"]
